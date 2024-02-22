@@ -1,167 +1,66 @@
-# Frappe Better Numerical Controls
+<div align="center">
+  <img src="https://grow.empress.eco/uploads/default/original/2X/1/1f1e1044d3864269d2a613577edb9763890422ab.png" alt="Project Logo" />
+</div>
 
-A small plugin for Frappe that adds the support of customizations to the numerical controls.
+<p align="center">
+Boost your numerical inputs with advanced customization options for superior control and flexibility.
+<br />
+<a href="https://github.com/empress-eco/better_numerical_controls"><strong>Explore the Docs »</strong></a>
+<br />
+<br />
+<a href="https://github.com/empress-eco/better_numerical_controls/issues/new?assignees=kid1194&labels=bug&template=bug_report.md&title=%5BBUG%5D">Report Bug</a>
+·
+<a href="https://github.com/empress-eco/better_numerical_controls/issues/new?assignees=kid1194&labels=enhancement&template=feature_request.md&title=%5BFeature%5D">Request Feature</a>
+</p>
 
----
+## About The Project
 
-### Table of Contents
-- [Requirements](#requirements)
-- [Setup](#setup)
-  - [Install](#install)
-  - [Update](#update)
-  - [Uninstall](#uninstall)
-- [Usage](#usage)
-- [Available Options](#available-options)
-- [Supported Fields](#supported-fields)
-- [Issues](#issues)
-- [License](#license)
+### Overview 📖 
 
----
+Better Numerical Controls is a compact yet potent plugin designed for developers who crave superior control over their numerical inputs. This tool addresses the challenge of limited customization of numerical inputs in your projects, significantly enhancing your flexibility and productivity.
 
-### Requirements
-- Frappe >= v12.0.0
+### Key Features 🌟 
+- Advanced customization of numerical controls.
+- Support for Int, Float, and Currency fields.
+- Seamless integration and user-friendly usage.
 
----
+### Built With 🛠 
+This project is built on Empress, a full-stack web application framework written in Python & JavaScript with MariaDB as the database.
 
-### Setup
+## Getting Started
 
-⚠️ *Important* ⚠️
+### Prerequisites
+Ensure your project is running on Empress version 12.0.0 or later.
 
-*Do not forget to replace [sitename] with the name of your site in all commands.*
+### Installation
+Follow these steps to get Better Numerical Controls up and running in your project:
 
-#### Install
-1. Go to bench directory
-
+```sh
+cd ~/Empress-bench
+git clone https://github.com/empress-eco/better_numerical_controls.git
+cd better_numerical_controls
+bench build --app Empress_better_numerical_controls
+bench --site [sitename] install-app Empress_better_numerical_controls
 ```
-cd ~/frappe-bench
-```
+Replace `[sitename]` with the name of your site in all commands.
 
-2. Get plugin from Github
+## Usage
+After installation, navigate to Customization > Customize Form, enter your form type/name, and start customizing your numerical controls! For more detailed instructions, refer to the [usage](https://github.com/empress-eco/better_numerical_controls#usage) section in our docs.
 
-*(Required only once)*
+## Contributing
 
-```
-bench get-app https://github.com/kid1194/frappe-better-numerical-controls
-```
+Your contributions are warmly welcomed! Here's how you can contribute:
 
-3. Build plugin
+- Fork the Project
+- Create your Feature Branch (git checkout -b feature/AmazingFeature)
+- Commit your Changes (git commit -m 'Add some AmazingFeature')
+- Push to the Branch (git push origin feature/AmazingFeature)
+- Open a Pull Request
 
-*(Required only once)*
-
-```
-bench build --app frappe_better_numerical_controls
-```
-
-4. Install plugin on a specific site
-
-```
-bench --site [sitename] install-app frappe_better_numerical_controls
-```
-
-5. Check the [usage](#usage) section below
-
-#### Update
-1. Go to app directory
-
-```
-cd ~/frappe-bench/apps/frappe_better_numerical_controls
-```
-
-2. Get updates from Github
-
-```
-git pull
-```
-
-3. Go to bench directory
-
-```
-cd ~/frappe-bench
-```
-
-4. Build plugin
-
-```
-bench build --app frappe_better_numerical_controls
-```
-
-5. Update a specific site
-
-```
-bench --site [sitename] migrate
-```
-
-6. (Optional) Restart bench
-
-```
-bench restart
-```
-
-#### Uninstall
-1. Go to bench directory
-
-```
-cd ~/frappe-bench
-```
-
-2. Uninstall plugin from a specific site
-
-```
-bench --site [sitename] uninstall-app frappe_better_numerical_controls
-```
-
-3. Remove plugin from bench
-
-```
-bench remove-app frappe_better_numerical_controls
-```
-
-4. (Optional) Restart bench
-
-```
-bench restart
-```
-
----
-
-### Usage
-1. Go to Customization > Customize Form
-2. Enter the form type/name (Ex: 'User')
-3. Scroll down to the form fields area and create an **Int**, **Float** or **Currency** field or edit an existing custom field
-4. In the **options** property of the field, add a JSON object of the customizations you want. Example:
-```
-{"min": 10, "max": 100}
-```
-
-ℹ️ **Note: You can't modify the original fields of a doctype, so create a new field or clone and modify the entire doctype.**
-
----
-
-### Available Options
-
-| Option | Description |
-| :--- | :--- |
-| `min` | The minimum number allowed.<br/><br/>- Example:<br/>-- Int: `10`<br/>-- Float: `10.5` |
-| `max` | The maximum number allowed.<br/><br/>- Example:<br/>-- Int: `100`<br/>-- Float: `100.5` |
-| `divisible_by` | The number that the value must be divisible by. ⚠️ Only for Int fields.<br/><br/>- Example: `5` |
-| `min_field` | The name of the field that holds the minimum number allowed.<br/><br/>- Example: `min_price` |
-| `max_field` | The name of the field that holds the maximum number allowed.<br/><br/>- Example: `max_price` |
-
-**The checking order is as follows: max_field, min_field, divisible_by, max, min.**
-
----
-
-### Supported Fields
-- Int
-- Float
-- Currency
-
----
-
-### Issues
-If you find bug in the plugin, please create a [bug report](https://github.com/kid1194/frappe-better-numerical-controls/issues/new?assignees=kid1194&labels=bug&template=bug_report.md&title=%5BBUG%5D) and let us know about it.
-
----
+## License and Acknowledgements
 
 ### License
-This repository has been released under the [MIT License](https://github.com/kid1194/frappe-better-numerical-controls/blob/main/LICENSE).
+This project is licensed under the MIT License. Your contributions are also licensed under the MIT License.
+
+### Acknowledgements
+Our heartfelt appreciation goes to the Empress Community, the pioneers behind the essential tools that power this project. Their innovative work and dedication have been instrumental in building the foundations and functionalities we rely on. We are profoundly grateful for their pioneering work and ongoing support.
